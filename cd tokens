@@ -1,0 +1,40 @@
+#creating a file
+%%writefile test.txt
+int main(){
+int n,a[100],i;
+for(i=0;i<n;i++){
+scanf("%d",&n);
+}
+printf("%d",&a[i])
+}
+
+#code for token generation
+alphabets=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+special_sym=['(',')','{','}','[',']','&','%','=','+',',',';','"','<']
+s=''
+for i in open('test.txt'):
+        for j in i:
+            if j!=' ':
+                if j!=' ' and j not in special_sym:
+                    s=s+j
+                else:
+                    if s==' ':
+                        pass
+                    else:
+                        print(f'{s} is a identifier')
+                        s=' '
+                    if j in ['1','0']:
+                        print(f'{j} is a digit')
+                    if j in special_sym:
+                        print(f'{j} is a operator')
+            else:
+                if j==' ':
+                    print(f'{s} is a identifier')
+                    s=''
+                if j in alphabets:
+                    print(f'{j} is a identifier')
+
+            
+            
+        
+        
